@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // $(selector) for the basis of commands
+        // .ready will have a 100% chance of loading the page before the JS
+        $(document).ready(function(){
+            //tag selector
+            $('p').click(function(){
+                $('p').hide();
+            });
+
+            //class selector
+            $('.text').click(function(){
+                $('p').show();
+            });
+
+            $('#text').click(function(){
+                $('div#text').hide;
+            });
+        });
+    </script>
 </head>
 <body>
   <p>I'm some text!</p>
