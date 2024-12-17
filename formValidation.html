@@ -4,21 +4,73 @@
     <meta charset="UTF-8">
     <title>Form Validation</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#submit").click(function(){
+        if($("#fname").val().length === 0){
+         $("#fname").css({"background-color": "red"})
+          $("#fnameE").css({"display": "block"});
+        }
+      });
+
+      $("#submit").click(function(){
+        if($("#lname").val().length === 0){
+          $("#lname").css({"background-color": "red"})
+          $("#lnameE").css({"display": "block"});
+        }
+      });
+
+      $("#submit").click(function(){
+        if($("#dob").val().length === 0){
+          $("#dob").css({"background-color": "red"})
+          $("#dobE").css({"display": "block"});
+        }
+      });
+
+      $("#submit").click(function(){
+        if($("#city").val().length === 0){
+          $("#city").css({"background-color": "red"})
+          $("#cityE").css({"display": "block"});
+        }
+      });
+
+      $("#submit").click(function(){
+        if($("#zip").val().length === 0){
+          $("#zip").css({"background-color": "red"})
+          $("#zipE").css({"display": "block"});
+        }
+      });
+    });
+  </script>
 </head>
 <body>
 <form>
   <label for="fname">First Name</label>
-  <input type="text" name="fname" id="fname"/><br />
+  <input type="text" name="fname" id="fname"/>
+  <div id="fnameE" style="display:none">Please enter your first name.</div>
+  <br />
+
+
   <label for="lname">Last Name</label>
-  <input type="text" name="lname" id="lname"/><br />
+  <input type="text" name="lname" id="lname"/>
+  <div id="lnameE" style="display:none">Please enter your last name.</div>
+  <br />
+
   <label for="dob">DOB</label>
-  <input type="text" name="dob" id="dob"/><br />
+  <input type="text" name="dob" id="dob"/>
+  <div id="dobE" style="display:none">Please enter your date of birth.</div>
+  <br />
+
   <label for="street">Street Address</label>
-  <input type="text" name="street" id="street"/><br />
+  <input type="text" name="street" id="street"/>
+  <div id="streetE" style="display:none">Please enter your street address.</div>
+
+  <br />
   <label for="street2">Address 2</label>
   <input type="text" name="street2" id="street2"/><br />
   <label for="city">City</label>
   <input type="text" name="city" id="city"/>
+  <div id="cityE" style="display:none">Please enter a city.</div>
   <label for="state">State</label>
   <select name="state" id="state">
     <option value="AL">Alabama</option>
@@ -74,9 +126,13 @@
     <option value="WY">Wyoming</option>
   </select>
   <label for="ZIP">ZIP</label>
-  <input type="text" name="ZIP" id="ZIP"/><br />
+  <input type="text" name="ZIP" id="ZIP"/>
+  <div id="zipE" style="display:none">Please enter your zip code.</div>
+  <br />
   <label for="phone">Phone</label>
-  <input type="text" name="phone" id="phone"/><br />
+  <input type="text" name="phone" id="phone"/>
+  <div id="phoneE" style="display:none">Please enter your phone number.</div>
+  <br />
   <label for="email">Email</label>
   <input type="text" name="email" id="email"/><br />
   <label for="username">Username</label>
@@ -86,7 +142,7 @@
   <label for="password2">Retype Password</label>
   <input type="text" name="password2" id="password2"/><br />
   <input type="checkbox" name="consent" id="consent">I agree to receive mail for your worthless crap. <br />
-  <button type="submit" name="submit" id="submit">Submit</button>
+  <button type="button" name="submit" id="submit">Submit</button>
 </form>
 
 </body>
